@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  pull_request:
+
+jobs:
+
+  pylint:
+    name: lint python code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source code
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Install Python dependencies for pylint/testing
+        run: |
+          pip install boto3 requests pytest hello_world apig_wsgi flask pylint
+      - name: pylint dataservice/
+        continue-on-error: true
+        run: |
+          pylint dataservice/
+
+  eslint:
+    name: lint javascript code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source code
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Install NPM packages required
+        working-directory: ./client
+        run: |
+          npm install
+      - name: ESLint
+        continue-on-error: true
+        working-directory: ./client/src
+        run: |
+          npx eslint
