@@ -1,6 +1,6 @@
 # JG Wellness 2.0 AKA EffingLegs
 
-![sweep the leg](https://github.com/kevholmes/effinglegsdocs/blob/main/cobra_kai.jpeg)
+Code Wars 2022
 
 ## Why do I need this?
 
