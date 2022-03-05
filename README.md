@@ -94,7 +94,7 @@ sam local start-api
 This application utilizes GitHub Actions and a mixture of custom
 and pre-made workflows from vendors like Amazon.
 
-CI/CD pipelines are located within the <https://github.com/kevholmes/effinglegsdocs/main/.github/workflows> folder.
+CI/CD pipelines are located within the <https://github.com/kevholmes/effinglegsdocs/tree/main/.github/workflows> folder.
 
 ## SQL Schema
 
@@ -102,5 +102,5 @@ The database Schema is relatively simple, we have four tables
 that currently track users, their efforts, and challenges
 between users. We also have a table to link users and their challenges.
 
-SQL seed entries can be found in the <https://github.com/kevholmes/effinglegsdocs/main/sql> folder of this project.
+SQL seed entries can be found in the <https://github.com/kevholmes/effinglegsdocs/tree/main/sql> folder of this project.
 
